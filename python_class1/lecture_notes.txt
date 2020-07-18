@@ -1,0 +1,2 @@
+help(list.reverse)  # can type this in terminal to get help on different
+python functions and elements

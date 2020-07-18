@@ -6,6 +6,7 @@
 #     if b is None:
 #         b = []
 
+# ex 1
 def calc_nums(x, y, operation="add"):
     if operation == "add":
         print(x+y)
