@@ -1,2 +1,4 @@
-help(list.reverse)  # can type this in terminal to get help on different
+1. help()  # can type this in terminal to get help on different
 python functions and elements
+2. type() #returns class type of the argument (object) passed as a parameter
+3. dir() # returns a list of the attributes and methods of any object

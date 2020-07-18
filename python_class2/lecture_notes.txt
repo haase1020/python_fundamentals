@@ -1,0 +1,60 @@
+# list comprehensions examples
+names = ["bob", "bob", "mike", "mike"]
+[name.upper() for name in names] 
+[("length", len(name)) for name in names] # to create a tuple with length and length of each string
+
+",".join([f"name is { name}" for name in names])
+# returns: 'name is bob,name is mike,name is bob' 
+
+num= [2,3,4,5,6,7]
+[num * num for num in range(4) if num % 2 ==0]
+returns even numbers: [0, 4]
+
+
+# set comprehension
+{num * num for num in range(11)}
+
+# dictionary comprehension
+{num: num * num for num in range(11)} # shows num then num squared
+
+# generator expression (or comprehension is you like~)
+dups_names = ["nina", "max", "nina"]
+set(dups_names)
+    # returns {"max", "nina"}
+set([len(name) for name in dups_names])
+    # returns {3, 4}
+    [len(name) for name in dups_names]
+    # returns [4, 3, 4]
+
+(len(name) for name in dups_names)
+# returns <generator object <genexpr> at 0x02B5B610>
+# then making a set from the generator expression is more efficient
+set((len(name) for name in dups_names))
+# extra parentheses are optional:
+set(len(name) for name in dups_names)
+# then call use other methods:
+max(len(name) for name in dups_names)
+
+# zip
+players = ["nina", "bob", "alice"]
+scores = [100, 5, 97]
+zip(players, scores)
+# returns: <zip object at 0x02CDAE48>
+for item in zip(players, scores):
+    print(item)
+    # returns list of tuples:
+    ('nina', 100)
+    ('bob', 5)
+    ('alice', 97)
+
+now you can do the following:
+for names, score, in zip(players, scores):    
+    print(f"name: {name} has a score of {score}")
+# returns 
+name: mandi has a score of 100
+name: mandi has a score of 5
+name: mandi has a score of 97
+
+can also do:
+list(zip(players, scores))
+# returns: [('nina', 100), ('bob', 5), ('alice', 97)]
