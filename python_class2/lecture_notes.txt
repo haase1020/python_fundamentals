@@ -58,3 +58,17 @@ name: mandi has a score of 97
 can also do:
 list(zip(players, scores))
 # returns: [('nina', 100), ('bob', 5), ('alice', 97)]
+
+isinstance(42, str)
+# returns FALSE
+
+any([True, False, True])
+# returns True
+
+all([True, False, True])
+# returns False
+
+repr(1)  # this is for the computer, not so much for people to read
+# returns '1'
+
+import 
